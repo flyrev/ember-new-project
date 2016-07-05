@@ -3,7 +3,16 @@
 set -e
 set -x
 
-ember new $1
+mkdir $1
 cd $1
-ember install ember-cli-template-lint
-ember install ember-truth-helpers
+ember init
+
+for addon in ember-cli-template-lint ember-truth-helpers
+do
+    ember install ${addon}
+    git add .
+    git commit -am "ember install ${addon}"
+done
+
+npm install
+bower install
