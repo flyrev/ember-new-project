@@ -9,6 +9,12 @@ install_addon() {
     git commit -am "ember install ${addon}"
 }
 
+generate_route() {
+    ember generate route $1
+    git add .
+    git commit -am "ember generate route ${route}"
+}
+
 mkdir $1
 cd $1
 ember init
@@ -20,3 +26,13 @@ done
 
 npm install
 bower install
+
+git add app
+git commit -am "Initial app"
+
+for route in application
+do
+    generate_route $route
+done
+
+git push
