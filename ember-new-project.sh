@@ -18,6 +18,8 @@ generate_route() {
 mkdir $1
 cd $1
 ember init
+git add .
+git commit -am "Initial app"
 
 for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii ember-cli-favicon
 do
@@ -26,9 +28,6 @@ done
 
 npm install
 bower install
-
-git add app
-git commit -am "Initial app"
 
 for route in application
 do
