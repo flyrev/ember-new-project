@@ -36,3 +36,5 @@ do
 done
 
 git push
+
+echo Add favicon to public/favicon.png
