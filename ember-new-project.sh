@@ -36,4 +36,7 @@ done
 
 git push
 
-echo Add favicon to public/favicon.png
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # directory that the script is stored in, see http://stackoverflow.com/q/59895/334862
+cp -v "${SCRIPT_DIR}/favicon.png" "$1/public"
+
+echo Sample favicon added (not commited)
