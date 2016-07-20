@@ -19,7 +19,7 @@ mkdir $1
 cd $1
 ember init
 
-for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii
+for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii ember-cli-favicon
 do
     install_addon ${addon}
 done
