@@ -15,6 +15,9 @@ generate_route() {
     git commit -am "ember generate route ${route}"
 }
 
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # directory that the script is stored in, see http://stackoverflow.com/q/59895/334862
+echo Script is located at $SCRIPT_DIR
+
 mkdir $1
 cd $1
 ember init
@@ -36,7 +39,6 @@ done
 
 git push
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # directory that the script is stored in, see http://stackoverflow.com/q/59895/334862
 cp -v "${SCRIPT_DIR}/favicon.png" "$1/public"
 
 echo Sample favicon added (not commited)
