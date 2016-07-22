@@ -39,6 +39,5 @@ done
 
 git push
 
-cp -v "${SCRIPT_DIR}/favicon.png" "$1/public"
-
+cp -v "${SCRIPT_DIR}/favicon.png" "public"
 echo Sample favicon added (not commited)
