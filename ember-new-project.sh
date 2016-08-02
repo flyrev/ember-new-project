@@ -40,4 +40,4 @@ done
 git push
 
 cp -v "${SCRIPT_DIR}/favicon.png" "public"
-echo Sample favicon added (not commited)
+echo Sample favicon added, but not commited
