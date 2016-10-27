@@ -24,7 +24,7 @@ ember init
 git add .
 git commit -am "Initial app"
 
-for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-cli-bootstrap
+for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii ember-cli-favicon
 do
     install_addon ${addon}
 done
