@@ -21,8 +21,6 @@ echo Script is located at $SCRIPT_DIR
 mkdir $1
 cd $1
 ember init
-git add .
-git commit -am "Initial app"
 
 for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-bootstrap ember-cli-sass ember-local-storage
 do
@@ -30,12 +28,17 @@ do
 done
 
 npm install
-bower install
+bower install || echo Failed to run "bower install"
 
 for route in application
 do
     generate_route $route
 done
+
+ember generate ember-bootstrap
+
+git add .
+git commit -am "Initial app"
 
 git push
 
