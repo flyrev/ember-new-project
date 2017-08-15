@@ -25,7 +25,6 @@ git add .
 git commit -am "Initial app"
 
 for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-bootstrap ember-cli-sass
->>>>>>> Add ember-cli-sass
 do
     install_addon ${addon}
 done
@@ -40,5 +39,5 @@ done
 
 git push
 
-cp -v "${SCRIPT_DIR}/favicon.png" "public"
+cp -v "${SCRIPT_DIR}/favicon.png" "$1/public"
 echo Sample favicon added, but not commited
