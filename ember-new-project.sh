@@ -22,7 +22,7 @@ mkdir $1
 cd $1
 ember init
 
-for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-bootstrap ember-cli-sass ember-local-storage ember-moment
+for addon in ember-cli-template-lint ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-cli-sass ember-local-storage ember-moment
 do
     install_addon ${addon}
 done
@@ -35,7 +35,7 @@ do
     generate_route $route
 done
 
-ember generate ember-bootstrap
+touch app/styles/app.scss
 
 git add .
 git commit -am "Initial app"
