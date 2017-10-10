@@ -39,5 +39,5 @@ touch app/styles/app.scss
 
 (git add . && git commit -am "Initial app") || echo Not in a Git repository?
 
-cp -v "${SCRIPT_DIR}/favicon.png" "$1/public"
-echo Sample favicon added, but not commited
+cp -v "${SCRIPT_DIR}/favicon.png" "public/"
+echo Sample favicon added
