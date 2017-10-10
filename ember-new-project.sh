@@ -22,7 +22,7 @@ mkdir $1
 cd $1
 ember init
 
-for addon in ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-cli-sass ember-local-storage ember-moment
+for addon in ember-cli-bootstrap-4 ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-cli-sass ember-local-storage ember-moment
 do
     install_addon ${addon}
 done
@@ -35,9 +35,7 @@ do
     generate_route $route
 done
 
-touch app/styles/app.scss
+cp -v "${SCRIPT_DIR}/app.scss" app/styles/
+cp -v "${SCRIPT_DIR}/favicon.png" public/
 
 (git add . && git commit -am "Initial app") || echo Not in a Git repository?
-
-cp -v "${SCRIPT_DIR}/favicon.png" "public/"
-echo Sample favicon added
