@@ -10,7 +10,7 @@ mkdir $1
 cd $1
 ember init
 
-for addon in ember ember-cli-document-title ember-composable-helpers ember-font-awesome ember-cli-bootstrap-4 ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-cli-sass ember-local-storage ember-moment
+for addon in ember-cli-document-title ember-composable-helpers ember-font-awesome ember-cli-bootstrap-4 ember-truth-helpers ember-simple-auth torii ember-cli-favicon ember-cli-sass ember-local-storage ember-moment
 do
     ember install ${addon}
 done
